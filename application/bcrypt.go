@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	var s string = `venezuela1`
+	var s string = `somepass`
 	bs, err := bcrypt.GenerateFromPassword([]byte(s), 4)
 	if err != nil {
 		fmt.Println(err)
@@ -16,7 +16,7 @@ func main() {
 	fmt.Println(bs)
 	fmt.Println(string(bs))
 
-	loginPass := `venezuela1`
+	loginPass := `somepass`
 	err = bcrypt.CompareHashAndPassword(bs, []byte(loginPass))
 	if err != nil {
 		fmt.Println("You couldn't log in")
