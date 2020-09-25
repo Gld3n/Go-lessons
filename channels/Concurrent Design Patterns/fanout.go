@@ -11,7 +11,7 @@ func main() {
 	c1 := make(chan int)
 	c2 := make(chan int)
 
-	go addint(c1)
+	go addInt(c1)
 
 	go fanOutIn(c1, c2)
 
@@ -22,7 +22,7 @@ func main() {
 	fmt.Println("about to exit")
 }
 
-func addint(c chan int) {
+func addInt(c chan int) {
 	// put the index number in c 100 times
 	for i := 0; i < 100; i++ {
 		c <- i
