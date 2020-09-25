@@ -19,7 +19,7 @@ func main() {
 		fmt.Println(v)
 	}
 
-	fmt.Println("about to exit")
+	fmt.Println("About to exit.")
 }
 
 func addInt(c chan int) {
